@@ -27,7 +27,7 @@ namespace AudioTranscriptionAPI.Controllers
 
             try
             {
-                var transcription = await TranscribeAudio(filePath);
+                var transcription = await WhisperTranscription.TranscribeAudio(filePath);
                 return Ok(transcription);
             }
             catch (Exception ex)
@@ -39,11 +39,6 @@ namespace AudioTranscriptionAPI.Controllers
                 // Clean up the temporary file
                 System.IO.File.Delete(filePath);
             }
-        }
-
-        private static async Task<string> TranscribeAudio(string audioFilePath)
-        {
-            return "";
         }
     }
 }

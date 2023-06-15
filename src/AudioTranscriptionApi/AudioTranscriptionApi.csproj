@@ -8,6 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Whisper.net" Version="1.4.3" />
+    <PackageReference Include="Whisper.net.Runtime" Version="1.4.3" />
+  </ItemGroup>
+
+  <ItemGroup> 
+    <Content Include="Whisper/model_binary/**"> 
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> 
+    </Content> 
   </ItemGroup>
 
 </Project>
