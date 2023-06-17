@@ -18,7 +18,7 @@ public static class WhisperTranscription
 
         string output = "";
 
-        await foreach (var result in processor.ProcessAsync(fileStream))
+        await foreach (SegmentData result in processor.ProcessAsync(fileStream))
         {
             Console.WriteLine($"{result.Start}->{result.End}: {result.Text}");
             output += result.Text;
